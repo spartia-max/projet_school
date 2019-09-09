@@ -1,5 +1,5 @@
 <?php
-require '../app/autoloader.php';
+require '../app/Autoloader.php';
 
 \app\autoloader::register();
 
@@ -9,18 +9,20 @@ if(isset($_GET['p'])){
     $p=$_GET['p'];
 
 }else{
-    $p='home';
+    $p='login';
 }
 
 
 
 ob_start();
-if($p==='home'){
-    require '../pages/home.php';
+if($p==='login'){
+    require '../views/login_vw.php';
 }elseif($p==='article'){
-    require '../pages/single.php';
+    require '../views/student_vw.php';
 }elseif($p==='categorie'){
-    require '../pages/categorie.php';
+    require '../views/teacher_vw.php';
+}elseif($p==='director'){
+    require '../views/director_vw.php';
 }
 $content=ob_get_clean();
-require '../pages/templates/default.php';
+require '../views/template/default.php';
