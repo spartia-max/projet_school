@@ -5,7 +5,20 @@ require 'Utilisateur.php';
 class Eleve extends Utilisateur
 {
 
-    public function __construct($first_name, $lastname, $login, $password, $email, $class, $gender)
+    /**
+     * __construct
+     *
+     * @param  string $first_name est le prenom de l'utilisateur.
+     * @param  string $lastname est le nom de l'utilisateur.
+     * @param  string $login est l'identifiant de l'utilisateur.
+     * @param  string $password est le mot de passe de l'utilisateur
+     * @param  string $email est l'email de l'utilisateur.
+     * @param  string $class est la classe de l'utilisateur.
+     * @param  string $gender est le genre de l'utilisateur.
+     *
+     * @return void
+     */
+    public function __construct(string $first_name,string $lastname,string $login,string $password,string $email,string $class,string $gender)
     {
         
         parent::__construct($first_name, $lastname, $login, $password, $email);
@@ -14,8 +27,3 @@ class Eleve extends Utilisateur
         $this->_gender = $gender;
     }
 }
-
-
-$eleve = new Eleve ("Bruno", "Genova", "Genoba_b", "password", "brunogenova.recrutement@gmail.com", "CM2", "M");
-
-var_dump($eleve);
