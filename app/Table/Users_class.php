@@ -33,7 +33,7 @@ class Users
         $this->_login = $login;
         $this->_password = $password;
         $this->_email =$email;
-        $this->_status = "Directeur";
+        $this->_status = $status;
         $this->_class = NULL;
         $this->_age = NULL;
         $this->_salary = NULL;
@@ -77,7 +77,6 @@ class Users
     public function set_first_name($_first_name)
     {
         $this->_first_name = $_first_name;
-
         return $this;
     }
 
@@ -97,7 +96,6 @@ class Users
     public function set_last_name($_last_name)
     {
         $this->_last_name = $_last_name;
-
         return $this;
     }
 
@@ -117,7 +115,6 @@ class Users
     public function set_login($_login)
     {
         $this->_login = $_login;
-
         return $this;
     }
 
@@ -137,8 +134,8 @@ class Users
     public function set_password($_password)
     {
         $this->_password = $_password;
-
         return $this;
+
     }
 
     /**
@@ -157,8 +154,8 @@ class Users
     public function set_email($_email)
     {
         $this->_email = $_email;
-
         return $this;
+
     }
 
     /**
@@ -177,7 +174,6 @@ class Users
     public function set_status($_status)
     {
         $this->_status = $_status;
-
         return $this;
     }
 
@@ -186,7 +182,7 @@ class Users
      */ 
     public function get_class()
     {
-        return $this->_class;
+        return $this->$_class;
     }
 
     /**
@@ -197,8 +193,9 @@ class Users
     public function set_class($_class)
     {
         $this->_class = $_class;
-
         return $this;
+
+        
     }
 
     /**
@@ -217,8 +214,9 @@ class Users
     public function set_age($_age)
     {
         $this->_age = $_age;
-
         return $this;
+
+    
     }
 
     /**
@@ -237,7 +235,6 @@ class Users
     public function set_salary($_salary)
     {
         $this->_salary = $_salary;
-
         return $this;
     }
 
@@ -257,7 +254,6 @@ class Users
     public function set_seniority($_seniority)
     {
         $this->_seniority = $_seniority;
-
         return $this;
     }
 
@@ -277,7 +273,6 @@ class Users
     public function set_gender($_gender)
     {
         $this->_gender = $_gender;
-
         return $this;
     }
 }
