@@ -1,0 +1,27 @@
+header{
+    height: 300px;
+    width: 100%;
+    padding: 20px;
+}
+
+h1{
+    font-size: 50px;
+    text-shadow: 1px 1px 2px;
+    text-align: center;
+}
+#logo{
+height: 60%;
+}
+
+form{
+display: flex;
+justify-content: center;
+height: 30px;
+padding: 10px;
+}
+
+#connect{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+}
